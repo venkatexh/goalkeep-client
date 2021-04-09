@@ -8,6 +8,7 @@ import {
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/Home";
+import New from "../pages/New";
 
 const MainScreen = () => {
   const state = useSelector(({ loggedUser }) => ({ loggedUser }));
@@ -29,6 +30,7 @@ const MainScreen = () => {
     return (
       <Switch>
         <Route exact path={"/home"} component={Home} />
+        <Route exact path={"/goal/new"} component={New} />
       </Switch>
     );
   };
