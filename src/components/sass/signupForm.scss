@@ -1,0 +1,22 @@
+.signup-form-container {
+
+  .signup-banner {
+
+  }
+
+  .signup-form {
+
+    display: flex;
+    flex-direction: column;
+
+    .signup-input {
+      width: 350px;
+      height: 25px;
+    }
+
+    .signup-submit {
+      width: 200px;
+      height: 25px;
+    }
+  }
+}

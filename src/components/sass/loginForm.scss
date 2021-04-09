@@ -1,0 +1,21 @@
+.login-form-container {
+
+  .form-banner {
+
+  }
+  .login-form {
+
+    display: flex;
+    flex-direction: column;
+
+    .login-input {
+      width: 350px;
+      height: 25px;
+    }
+
+    .login-submit {
+      width: 200px;
+      height: 25px;
+    }
+  }
+}
