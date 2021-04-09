@@ -1,0 +1,74 @@
+.home {
+  background-color: #cacdde;
+  min-height: 100vh;
+  height: 100%;
+
+  .all-tab {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    background-color: #cacdde;
+
+    .content-nav {
+
+      width: 200px;
+      height: auto;
+      margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .nav-btn {
+        width: 180px;
+        height: 30px;
+        margin: 5px;
+        padding-left: 20px;
+        border: none;
+        outline: none;
+        background-color: #cacdde;
+        border-radius: 0 20px 20px 0;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .create-goal-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .create-goal {
+          width: 120px;
+          height: 28px;
+          margin: 20px 0;
+          border: none;
+          outline: none;
+          background-color: #3851cf;
+          border-radius: 5px;
+          font-family: 'Roboto', sans-serif;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .btn-selected {
+        background-color: #0b1233;
+        color: white;
+      }
+    }
+
+    .all-cards-container {
+      width: 90%;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
