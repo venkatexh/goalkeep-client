@@ -29,6 +29,15 @@
       background-color: #e8eaed;
     }
 
+    .no-input {
+      border-bottom: 1px solid red;
+    }
+
+    .no-match {
+      font-size: 15px;
+      color: red;
+    }
+
     .signup-submit {
       width: 200px;
       height: 36px;
