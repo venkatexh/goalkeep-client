@@ -1,4 +1,4 @@
-import "./sass/authHeader.scss";
+import "../sass/authHeader.scss";
 
 const AuthHeader = () => {
   return (
