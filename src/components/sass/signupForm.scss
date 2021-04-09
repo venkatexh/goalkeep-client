@@ -1,22 +1,48 @@
 .signup-form-container {
 
-  .signup-banner {
+  width: 100%;
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  .signup-banner {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 24px;
+    padding: 20px 0;
   }
 
   .signup-form {
 
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .signup-input {
       width: 350px;
-      height: 25px;
+      height: 30px;
+      margin: 15px 0;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: #e8eaed;
     }
 
     .signup-submit {
       width: 200px;
-      height: 25px;
+      height: 36px;
+      margin: 10px 0;
+      background: #2822bf;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
     }
+  }
+
+  .to-login {
+    display: flex;
   }
 }

@@ -36,8 +36,8 @@ const LoginForm = () => {
         />
         <input className={"login-submit"} type={"submit"} />
       </form>
-      <div>
-        New here?
+      <div className={"to-signup"}>
+        <div>New here?&nbsp;</div>
         <Link to={"/signup"}>Signup</Link>
       </div>
     </div>

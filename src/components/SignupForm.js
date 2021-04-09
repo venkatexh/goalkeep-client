@@ -34,7 +34,8 @@ const SignupForm = () => {
   return (
     <div className={"signup-form-container"}>
       <div className={"signup-banner"}>
-        New here? Signup and change your life.
+        New here? <br />
+        Signup and change your life.
       </div>
       <form className={"signup-form"} onSubmit={handleFormSubmit}>
         <input
@@ -72,10 +73,10 @@ const SignupForm = () => {
           placeholder={"confirm password"}
           onChange={handleConfirmPasswordChange}
         />
-        <input className={"signup-submit"} type={"submit"} />
+        <input className={"signup-submit"} type={"submit"} value={"Signup"} />
       </form>
-      <div>
-        Already a member?
+      <div className={"to-login"}>
+        <div>Already a member?&nbsp;</div>
         <Link to={"/login"}>Login</Link>
       </div>
     </div>
