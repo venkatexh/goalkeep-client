@@ -11,7 +11,6 @@
     background-color: #cacdde;
 
     .content-nav {
-
       width: 200px;
       height: auto;
       margin: 40px 0;
@@ -36,30 +35,30 @@
         cursor: pointer;
       }
 
-      .create-goal-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        .create-goal {
-          width: 120px;
-          height: 28px;
-          margin: 20px 0;
-          border: none;
-          outline: none;
-          background-color: #3851cf;
-          border-radius: 5px;
-          font-family: 'Roboto', sans-serif;
-          color: #ffffff;
-          font-size: 12px;
-          font-weight: bold;
-          cursor: pointer;
-        }
-      }
-
       .btn-selected {
         background-color: #0b1233;
         color: white;
+      }
+    }
+
+    .create-goal-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .create-goal {
+        width: 120px;
+        height: 28px;
+        margin: 20px 0;
+        border: none;
+        outline: none;
+        background-color: #3851cf;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
 
@@ -70,5 +69,39 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .all-tab {
+    flex-direction: column;
+  }
+
+  .all-tab .content-nav {
+    flex-direction: row !important;
+    margin: 10px auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .nav-btn {
+    border-radius: 20px !important;
+    padding: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .all-cards-container {
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .all-tab {
+    width: 100% !important;
+  }
+
+  .all-cards-container {
+    width: 100% !important;
   }
 }
