@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./sass/loginForm.scss";
+import "../sass/loginForm.scss";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {

@@ -1,6 +1,6 @@
 import "./sass/login.scss";
-import AuthHeader from "../components/AuthHeader";
-import LoginForm from "../components/LoginForm";
+import AuthHeader from "../components/auth/AuthHeader";
+import LoginForm from "../components/auth/LoginForm";
 
 const Login = () => {
   return (

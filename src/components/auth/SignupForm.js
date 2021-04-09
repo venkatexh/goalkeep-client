@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./sass/signupForm.scss";
+import "../sass/signupForm.scss";
 
 const SignupForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -55,9 +55,14 @@ const SignupForm = () => {
     } else {
       if (password !== confirmPassword) {
         setNoMatch(true);
+      } else {
+        setNoMatch(false);
+        signupUser();
       }
     }
   };
+
+  const signupUser = () => {};
 
   return (
     <div className={"signup-form-container"}>
