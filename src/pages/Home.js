@@ -18,6 +18,10 @@ const Home = () => {
     allGoals,
   }));
 
+  const currentGoals = [];
+  const pendingGoals = [];
+  const completedGoals = [];
+
   const { loggedUser, allGoals } = state;
 
   useEffect(() => {
@@ -28,7 +32,22 @@ const Home = () => {
     setSelectedTab(tab);
   };
 
+  const segregateGoals = (goals) => {
+    let currDate = new Date();
+    goals.forEach((goal) => {
+      if (goal.completed) {
+        completedGoals.push(goal);
+      } else if (new Date(goal.finishDate) < currDate) {
+        pendingGoals.push(goal);
+      } else {
+        currentGoals.push(goal);
+      }
+    });
+  };
+
   const renderFirstTab = () => {
+    segregateGoals(allGoals);
+
     return (
       <div className={"all-tab"}>
         <div className={"content-nav"}>
@@ -58,22 +77,21 @@ const Home = () => {
         </div>
         {selectedNav === 0 ? (
           <div className={"all-cards-container"}>
-            {allGoals.map((goal) => (
+            {currentGoals.map((goal) => (
               <GoalCard key={goal.id} goal={goal} />
             ))}
           </div>
         ) : selectedNav === 1 ? (
           <div className={"all-cards-container"}>
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
+            {pendingGoals.map((goal) => (
+              <GoalCard key={goal.id} goal={goal} />
+            ))}
           </div>
         ) : (
           <div className={"all-cards-container"}>
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
+            {completedGoals.map((goal) => (
+              <GoalCard key={goal.id} goal={goal} />
+            ))}
           </div>
         )}
       </div>
