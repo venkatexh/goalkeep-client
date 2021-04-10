@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import TabsNav from "../components/nav/TabsNav";
 import HeaderNav from "../components/nav/HeaderNav";
 import "./sass/home.scss";
 import GoalCard from "../components/cards/GoalCard";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllGoals } from "../redux/actions/goals/fetchAllGoals";
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [selectedNav, setSelectedNav] = useState(0);
+
+  const dispatch = useDispatch();
+
+  const state = useSelector(({ loggedUser, allGoals }) => ({
+    loggedUser,
+    allGoals,
+  }));
+
+  const { loggedUser, allGoals } = state;
+
+  useEffect(() => {
+    dispatch(fetchAllGoals(loggedUser.id));
+  }, []);
 
   const handleTabSelection = (tab) => {
     setSelectedTab(tab);
@@ -43,12 +58,9 @@ const Home = () => {
         </div>
         {selectedNav === 0 ? (
           <div className={"all-cards-container"}>
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
-            <GoalCard />
+            {allGoals.map((goal) => (
+              <GoalCard key={goal.id} goal={goal} />
+            ))}
           </div>
         ) : selectedNav === 1 ? (
           <div className={"all-cards-container"}>

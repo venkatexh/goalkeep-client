@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import { loggedUser } from "./auth/loggedUser";
+import { allGoals } from "./goals/allGoals";
 
 const reducer = combineReducers({
   loggedUser,
+  allGoals,
 });
 
 const rootReducer = (state, action) => {
