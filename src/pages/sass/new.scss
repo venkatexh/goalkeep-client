@@ -65,7 +65,14 @@
       .add-task-btn {
         width: 70px;
         height: 25px;
-
+        background-color: #3851cf;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #ffffff;
+        cursor: pointer;
       }
     }
     .create-btn-container {
@@ -77,6 +84,14 @@
         width: 200px;
         height: 35px;
         margin: 20px 0;
+        background-color: #3851cf;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #ffffff;
+        cursor: pointer;
       }
     }
     }
@@ -88,7 +103,8 @@
   height: 30px;
   margin: 20px 0;
   border-radius: 5px;
-  background-color: #2822bf;
+  background-color: black;
   border: none;
   color: white;
+  cursor: pointer;
 }
