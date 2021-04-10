@@ -1,7 +1,8 @@
 export const loggedUser = (user = null, action) => {
   switch (action.type) {
-    case "LOGGED_USER":
-      return action.payload;
+    case "LOGIN":
+      sessionStorage.setItem("loggedUser", JSON.stringify(action.payload));
+      return JSON.parse(sessionStorage.getItem("loggedUser"));
     default:
       return user;
   }

@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "../sass/loginForm.scss";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/actions/auth/login";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [noEmail, setNoEmail] = useState(false);
   const [noPassword, setNoPassword] = useState(false);
+
+  const dispatch = useDispatch();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -25,6 +29,11 @@ const LoginForm = () => {
     } else if (!password) {
       setNoPassword(true);
     } else {
+      const user = {
+        email,
+        password,
+      };
+      dispatch(login(user));
     }
   };
 
