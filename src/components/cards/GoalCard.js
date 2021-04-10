@@ -23,7 +23,7 @@ const GoalCard = (props) => {
     >
       <div className={"goal-title"}>{title}</div>
       <div className={"date-range"}>
-        {moment(startDate).format("Do MMM YYYY")} -{" "}
+        {moment(startDate).format("Do MMM YYYY")} -&nbsp;
         {moment(finishDate).format("Do MMM YYYY")}
       </div>
       <div className={"todo-list"}>
