@@ -17,5 +17,15 @@
 
   .user-area {
     display: flex;
+    align-items: center;
+
+    .user-name {
+      padding: 10px 20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 19px;
+      font-weight: bold;
+      color: #ffffff;
+
+    }
   }
 }
