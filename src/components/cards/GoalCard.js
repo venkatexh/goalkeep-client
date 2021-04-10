@@ -23,7 +23,7 @@ const GoalCard = () => {
       <div className={"todo-list"}>
         <div>&#8226;&nbsp;Go scuba diving</div>
         <div>&#8226;&nbsp;Visit the Sydney Harbor bridge</div>
-        <div>&#8226;&nbsp;Visit the Sydney Harbor bridge</div>
+        <div>&#8226;&nbsp;Go on a campfire trekking</div>
       </div>
       <div className={"progress-bars"}>
         <div className={"progress-time"}>{""}</div>
