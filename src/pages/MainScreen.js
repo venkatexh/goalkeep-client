@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/Home";
 import New from "../pages/New";
+import { loggedUser } from "../redux/reducers/auth/loggedUser";
 
 const MainScreen = () => {
   const state = useSelector(({ loggedUser }) => ({ loggedUser }));
@@ -29,14 +30,18 @@ const MainScreen = () => {
   const sessionRoutes = () => {
     return (
       <Switch>
+        <Route exact path={"/"}>
+          <Redirect to={"/home"} />
+        </Route>
         <Route exact path={"/home"} component={Home} />
         <Route exact path={"/goal/new"} component={New} />
+        <Redirect to={"/"} />
       </Switch>
     );
   };
 
   const routesToReturn = () => {
-    if (state.loggedUser) {
+    if (sessionStorage.getItem("loggedUser")) {
       return sessionRoutes();
     } else {
       return nonSessionRoutes();
