@@ -14,7 +14,7 @@ const TabsNav = (props) => {
         className={`tab-selector ${selectedTab === 1 ? "tab-selected" : ""}`}
         onClick={() => props.setTab(1)}
       >
-        Bookmarked
+        Starred
       </button>
       <button
         className={`tab-selector ${selectedTab === 2 ? "tab-selected" : ""}`}
