@@ -9,6 +9,7 @@
   color: #ffffff;
   cursor: pointer;
   transition: transform 0.5s;
+  outline: 1px solid transparent;
 
   .goal-title {
     padding: 5px 0;
@@ -29,7 +30,7 @@
 
 
     .progress-time {
-      width: 70%;
+      //width: 70%;
       height: 2px;
       margin: 20px 0;
       border-radius: 20%;
