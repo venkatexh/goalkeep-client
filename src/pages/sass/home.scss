@@ -13,7 +13,7 @@
     .content-nav {
       width: 200px;
       height: auto;
-      margin: 40px 0;
+      margin: 45px 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -69,6 +69,27 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
+  }
+
+  .starred-cards-container {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .empty-message {
+    width: 100%;
+    height: 80vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #4e4e52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 }
 
