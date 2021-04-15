@@ -1,5 +1,5 @@
 const hostHeader = {
-  url: "http://localhost:5000",
+  url: "http://goalkeep-server.herokuapp.com",
 };
 
 export default hostHeader;

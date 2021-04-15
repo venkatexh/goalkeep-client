@@ -10,6 +10,7 @@ import Signup from "../pages/Signup";
 import Home from "../pages/Home";
 import New from "../pages/New";
 import Edit from "../pages/Edit";
+import View from "../pages/View";
 
 import { loggedUser } from "../redux/reducers/auth/loggedUser";
 
@@ -38,6 +39,7 @@ const MainScreen = () => {
         <Route exact path={"/home"} component={Home} />
         <Route exact path={"/goal/new"} component={New} />
         <Route exact path={"/goal/edit/:goal_id"} component={Edit} />
+        <Route exact path={"/goal/view/:goal_id"} component={View} />
         <Redirect to={"/"} />
       </Switch>
     );

@@ -50,7 +50,10 @@ const GoalCard = (props) => {
   const handleEditClick = () => {
     history.push(`/goal/edit/${_id}`);
   };
-  const handleViewClick = () => {};
+
+  const handleViewClick = () => {
+    history.push(`/goal/view/${_id}`);
+  };
 
   const handleCheckedClick = () => {
     const goal = {
