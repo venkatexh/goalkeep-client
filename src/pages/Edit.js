@@ -126,6 +126,7 @@ const Edit = (props) => {
               </button>
             </div>
           ))}
+          <div className={"label"}>Wanna add a new task?</div>
           <div
             style={{
               display: "flex",
@@ -135,7 +136,7 @@ const Edit = (props) => {
           >
             <input
               className={"add-input"}
-              placeholder={"New task"}
+              placeholder={"new task"}
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}
             />
