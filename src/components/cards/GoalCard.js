@@ -6,10 +6,13 @@ import view from "../../../src/assets/images/view.svg";
 import edit from "../../../src/assets/images/edit.svg";
 import trash from "../../../src/assets/images/trash.svg";
 import checked from "../../../src/assets/images/checked.svg";
+import { useHistory } from "react-router";
 
 const GoalCard = (props) => {
   const [showToolBar, setShowToolBar] = useState(false);
   const [cardClickDisabled, setCardClickDisabled] = useState(false);
+
+  const history = useHistory();
 
   const { _id, title, startDate, finishDate, tasks } = props.goal;
 
@@ -44,7 +47,9 @@ const GoalCard = (props) => {
     props.handleCategoryChange(_id, goal);
   };
 
-  const handleEditClick = () => {};
+  const handleEditClick = () => {
+    history.push(`/goal/edit/${_id}`);
+  };
   const handleViewClick = () => {};
 
   const handleCheckedClick = () => {
@@ -68,9 +73,11 @@ const GoalCard = (props) => {
       </div>
       <div className={"todo-list"}>
         {tasks.map((task) => (
-          <div key={task}>
+          <div key={task.task}>
             &#8226;&nbsp;
-            {task.length > 35 ? `${task.substring(0, 35)} . .` : task}
+            {task.task.length > 35
+              ? `${task.task.substring(0, 35)} . .`
+              : task.task}
           </div>
         ))}
       </div>

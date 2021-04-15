@@ -113,13 +113,21 @@ const Home = () => {
         ) : selectedNav === 1 ? (
           <div className={"all-cards-container"}>
             {pendingGoals.map((goal) => (
-              <GoalCard key={goal._id} goal={goal} />
+              <GoalCard
+                key={goal._id}
+                goal={goal}
+                handleCategoryChange={updateCategory}
+              />
             ))}
           </div>
         ) : (
           <div className={"all-cards-container"}>
             {completedGoals.map((goal) => (
-              <GoalCard key={goal._id} goal={goal} />
+              <GoalCard
+                key={goal._id}
+                goal={goal}
+                handleCategoryChange={updateCategory}
+              />
             ))}
           </div>
         )}

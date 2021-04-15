@@ -46,14 +46,14 @@ const New = () => {
     if (task.length === 0 || !task.trim()) {
       setNoTask(true);
     } else {
-      setTaskList((prev) => [...prev, task]);
+      setTaskList((prev) => [...prev, { task: task }]);
       setTask("");
     }
   };
 
   const handleRemoveTask = (e) => {
     let toRemove = e.target.parentElement.parentElement.textContent;
-    setTaskList(taskList.filter((task) => task !== toRemove));
+    setTaskList(taskList.filter((task) => task.task !== toRemove));
   };
 
   const handleCreateGoal = () => {
@@ -132,11 +132,11 @@ const New = () => {
           </div>
           <div>
             {taskList.map((task) => (
-              <div key={task} className={"task-list-task"}>
+              <div key={task.task} className={"task-list-task"}>
                 <div className={"task"}>
                   <div className={"task-text"}>
                     <img className={"bullet"} src={bullet} alt={""} />
-                    {task}
+                    {task.task}
                   </div>
                   <div>
                     <img
