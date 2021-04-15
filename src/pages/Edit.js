@@ -7,6 +7,7 @@ import hostHeader from "../config/hostHeader";
 import editButtonIcon from "../assets/images/editButtonIcon.svg";
 import "./sass/edit.scss";
 import { useHistory } from "react-router";
+import add from "../../src/assets/images/add.svg";
 
 const Edit = (props) => {
   const [goal, setGoal] = useState(null);
@@ -141,6 +142,11 @@ const Edit = (props) => {
               onChange={(e) => setNewTask(e.target.value)}
             />
             <button className={"add-task-btn"} onClick={handleAddNewTask}>
+              <img
+                style={{ width: "10px", height: "10px" }}
+                src={add}
+                alt={""}
+              />
               Add
             </button>
           </div>

@@ -1,19 +1,20 @@
 .new-goal {
 
   min-height: 100vh;
+  height: auto;
   background-color: #cacdde;
 
   .page-banner {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 28px;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
   }
 
   .new-goal-container {
     width: 60%;
-    margin: 50px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -21,7 +22,7 @@
     .form {
       width: 55%;
       height: auto;
-      margin: auto;
+      margin: 20px auto;
 
       .no-input {
         border-bottom: 1px solid red !important;
@@ -100,12 +101,12 @@
 
       .create-goal-btn {
         width: 200px;
-        height: 35px;
-        margin: 20px 0;
-        background-color: #3851cf;
+        height: 36px;
+        background: #2822bf;
         border: none;
         outline: none;
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 40px auto;
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         color: #ffffff;
